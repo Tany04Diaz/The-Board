@@ -9,7 +9,7 @@ Ya sea para anunciar una nueva tienda, mostrar una mega-construcción o simpleme
 ## Cómo Publicar Entradas e Imágenes
 ¡Hemos mejorado el sistema! Ahora compartir tus descubrimientos es más visual que nunca. Sigue estos pasos para subir contenido:
 
-1.  **Abrir The Board:** Accede a la interfaz desde el menú principal o mediante el comando asignado.
+1.  **Abrir The Board:** Accede a la interfaz desde el menú principal o mediante el comando /board.
 2.  **Preparar tus Imágenes:** En la pestaña de **"Nueva Entrada" (New Entry)**, presiona el **botón de carpeta**. Esto abrirá la carpeta de imágenes en tu ordenador.
 3.  **Añadir Archivos:** Coloca tus fotos (únicamente archivos `.png` o `.jpg`) dentro de esa carpeta.
 4.  **Recargar:** Sal de la interfaz y vuelve a entrar a "Nueva Entrada" para que el sistema detecte los archivos nuevos.
