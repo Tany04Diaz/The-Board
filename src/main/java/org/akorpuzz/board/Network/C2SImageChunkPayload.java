@@ -7,10 +7,14 @@ import net.minecraft.resources.ResourceLocation;
 
 import java.util.UUID;
 
-public record C2SImageChunkPayload(UUID imageId, int chunkIndex, int totalChunks, byte[] data)implements CustomPacketPayload {
-    public static final Type<C2SImageChunkPayload> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath("board", "image_chunk"));
-    @Override public Type<? extends CustomPacketPayload> type() {return TYPE;}
-    public static final StreamCodec<FriendlyByteBuf,C2SImageChunkPayload> STREAM_CODEC =
+public record C2SImageChunkPayload(UUID imageId, int chunkIndex, int totalChunks, byte[] data) implements CustomPacketPayload {
+    // ID único para SUBIDA
+    public static final Type<C2SImageChunkPayload> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath("board", "c2s_image_chunk"));
+
+    @Override
+    public Type<? extends CustomPacketPayload> type() { return TYPE; }
+
+    public static final StreamCodec<FriendlyByteBuf, C2SImageChunkPayload> STREAM_CODEC =
             StreamCodec.of(
                     (buf, payload) -> {
                         buf.writeUUID(payload.imageId());
@@ -18,5 +22,6 @@ public record C2SImageChunkPayload(UUID imageId, int chunkIndex, int totalChunks
                         buf.writeInt(payload.totalChunks());
                         buf.writeByteArray(payload.data());
                     },
-                    buf -> new C2SImageChunkPayload(buf.readUUID(), buf.readInt(), buf.readInt(), buf.readByteArray())            );
+                    buf -> new C2SImageChunkPayload(buf.readUUID(), buf.readInt(), buf.readInt(), buf.readByteArray())
+            );
 }

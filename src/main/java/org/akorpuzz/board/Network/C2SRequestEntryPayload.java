@@ -4,13 +4,11 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.ResourceLocation;
-
 import java.util.UUID;
 
 public record C2SRequestEntryPayload(UUID id) implements CustomPacketPayload {
-    static ResourceLocation resourceLocation = ResourceLocation.fromNamespaceAndPath("board","c2s_request_entry");
     public static final Type<C2SRequestEntryPayload> TYPE =
-            new Type<>(resourceLocation);
+            new Type<>(ResourceLocation.fromNamespaceAndPath("board", "c2s_request_entry"));
 
     @Override
     public Type<? extends CustomPacketPayload> type() { return TYPE; }
@@ -21,5 +19,3 @@ public record C2SRequestEntryPayload(UUID id) implements CustomPacketPayload {
                     buf -> new C2SRequestEntryPayload(buf.readUUID())
             );
 }
-
-

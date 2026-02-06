@@ -8,9 +8,11 @@ import net.minecraft.resources.ResourceLocation;
 import java.util.UUID;
 
 public record S2CImageChunkPayload(UUID imageId, int chunkIndex, int totalChunks, byte[] data) implements CustomPacketPayload {
+    // ID único para BAJADA
     public static final Type<S2CImageChunkPayload> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath("board", "s2c_image_chunk"));
 
-    @Override public Type<? extends CustomPacketPayload> type() { return TYPE; }
+    @Override
+    public Type<? extends CustomPacketPayload> type() { return TYPE; }
 
     public static final StreamCodec<FriendlyByteBuf, S2CImageChunkPayload> STREAM_CODEC = StreamCodec.of(
             (buf, payload) -> {
