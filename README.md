@@ -1,44 +1,45 @@
-# The Board: El Mural Social de tu Servidor
+#  The Board: El Mural Social de tu Servidor
 
 **The Board** es una plataforma de comunicación visual diseñada para servidores de Minecraft. Permite a los jugadores documentar su progreso, compartir historias y publicar anuncios importantes en un muro interactivo compartido por todos.
 
-Ya sea para anunciar una nueva tienda, mostrar una mega-construcción o simplemente compartir un momento divertido, **The Board** mantiene a tu comunidad conectada.
+---
+
+##  Cómo Publicar Entradas e Imágenes
+¡El sistema ha evolucionado! Sigue estos pasos para crear una publicación con contenido visual:
+
+1. **Abrir The Board:** Usa el comando `/board` o accede desde el menú principal.
+2. **Preparar tus Imágenes:** En la pestaña **"Nueva Entrada" (New Entry)**, presiona el **botón de carpeta**.
+3. **Añadir Archivos:** Coloca tus fotos (solo `.png` o `.jpg`) en la carpeta que se abrió.
+4. **Recargar:** Sal de la pantalla y vuelve a entrar a "Nueva Entrada" para que el mod detecte los nuevos archivos.
+5. **Seleccionar:** Pulsa **"Seleccionar Imagen"**, elige hasta **3 fotos** y confirma los nombres de los archivos.
+6. **Publicar:** Escribe tu historia (hasta **2000 caracteres**) y ¡listo!
 
 ---
 
-## Cómo Publicar Entradas e Imágenes
-¡Hemos mejorado el sistema! Ahora compartir tus descubrimientos es más visual que nunca. Sigue estos pasos para subir contenido:
+##  Historial de Desarrollo (Devlogs)
 
-1.  **Abrir The Board:** Accede a la interfaz desde el menú principal o mediante el comando /board.
-2.  **Preparar tus Imágenes:** En la pestaña de **"Nueva Entrada" (New Entry)**, presiona el **botón de carpeta**. Esto abrirá la carpeta de imágenes en tu ordenador.
-3.  **Añadir Archivos:** Coloca tus fotos (únicamente archivos `.png` o `.jpg`) dentro de esa carpeta.
-4.  **Recargar:** Sal de la interfaz y vuelve a entrar a "Nueva Entrada" para que el sistema detecte los archivos nuevos.
-5.  **Seleccionar e Ir:** * Pulsa el botón **"Seleccionar Imagen"**.
-    * Se abrirá un menú donde podrás elegir hasta **3 imágenes**. El sistema te confirmará los nombres de los archivos seleccionados.
-6.  **Escribir y Compartir:** Redacta tu texto (soporta hasta **2000 caracteres**) y dale a enviar. ¡Tu publicación aparecerá al instante en el feed!
+###  Devlog #2: Imágenes y Rediseño de GUI (Actual)
+Después de varios prototipos, hemos implementado la mejor forma de compartir contenido visual:
+* **Soporte Multimedia:** Ahora puedes subir hasta 3 imágenes por publicación.
+* **Sistema de Carga Local:** Integración directa con carpetas del sistema para facilitar la subida.
+* **Feed Optimizado:** Nueva interfaz que muestra de forma ordenada los datos del jugador y la fecha, separando claramente el texto de las imágenes.
+* **Expansión de Contenido:** Incremento del límite de texto a 2000 caracteres.
 
----
-
-## Novedades de la Versión (Devlog #1)
-Hemos rediseñado la interfaz y el sistema de visualización para una mejor experiencia:
-
-* **Mejora de GUI:** El feed ahora muestra de manera más ordenada los datos del jugador y la fecha.
-* **Diseño Limpio:** Se ha separado correctamente el cuerpo de texto de las imágenes para evitar desorden visual.
-* **Multicarga:** Ahora puedes incluir varias imágenes en un solo post para contar mejor tu historia.
+###  Devlog #1: El Inicio (Legacy)
+* **Comando Base:** Implementación del comando `/board`.
+* **Feed Funcional:** Creación de publicaciones de una línea que guardan nombre, fecha y texto.
+* **Navegación:** Se añadió la función de scroll para navegar por el historial de publicaciones.
 
 ---
 
-## Funcionalidades Planeadas (Roadmap)
-El desarrollo continúa. Estas son las características que llegarán pronto:
-
-* **Sistema de Perfiles:** Un feed personal para ver las publicaciones de un jugador específico.
-* **Hub de Jugadores:** Un menú principal con los perfiles de todos los que han publicado.
-* **Fotos de Perfil:** Posibilidad de elegir una imagen de la carpeta para usarla como avatar.
-* **Biografías:** Personaliza la descripción de tu perfil para que otros la vean en tu feed personal.
+##  Funcionalidades Planeadas (Roadmap)
+El desarrollo continúa a buen ritmo:
+* **Sistema de Perfiles:** Un feed personal para separar las publicaciones de cada jugador.
+* **Hub de Comunidad:** Un directorio con los perfiles de todos los que han publicado.
+* **Personalización:** Capacidad de elegir una "foto de perfil" y redactar una biografía personal que se muestre en tu feed.
 
 ---
 
-### 🛠 Especificaciones Técnicas
-* **Formatos soportados:** `.jpg`, `.png`
-* **Límite de texto:** 2000 caracteres.
-* **Capacidad multimedia:** Hasta 3 imágenes por entrada.
+###  Especificaciones Técnicas
+* **Formatos:** `.jpg`, `.png`
+* **Límite:** 2000 caracteres y 3 imágenes por entrada.
