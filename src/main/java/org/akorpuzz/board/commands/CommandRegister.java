@@ -3,20 +3,13 @@ package org.akorpuzz.board.commands;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterClientCommandsEvent;
-import net.neoforged.neoforge.event.RegisterCommandsEvent;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+// Los comandos de cliente se registran en el bus de juego (GAME), no en el de MOD
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.GAME)
 public class CommandRegister {
 
     @SubscribeEvent
-    public static void RegisterCommands(RegisterCommandsEvent event){
-    }
-
-    @SubscribeEvent
-    public static void RegisterClientCommands(RegisterClientCommandsEvent event){
+    public static void registerClientCommands(RegisterClientCommandsEvent event) {
         BoardCommand.register(event.getDispatcher());
     }
-
-
-
 }
